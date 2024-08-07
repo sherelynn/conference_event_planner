@@ -218,7 +218,7 @@ const ConferenceEvent = () => {
                       <img src={item.img} alt={item.name} />
                     </div>
                     <div className="text">{item.name}</div>
-                    <div>${item.cost}</div>
+                    <div className="text">${item.cost}</div>
                     <div className="button_container">
                       {venueItems[index].name ===
                       "Auditorium Hall (Capacity:200)" ? (
@@ -294,7 +294,7 @@ const ConferenceEvent = () => {
                       <img src={item.img} alt={item.name} />
                     </div>
                     <div className="text"> {item.name} </div>
-                    <div> ${item.cost} </div>
+                    <div className="text"> ${item.cost} </div>
                     <div className="addons-btn">
                       <button
                         className="btn-warning"
@@ -349,9 +349,11 @@ const ConferenceEvent = () => {
                         checked={item.selected}
                         onChange={() => handleMealSelection(index)}
                       />
-                      <label htmlFor={`meal_${index}`}> {item.name} </label>
+                      <label htmlFor={`meal_${index}`} className="text">
+                        {item.name}
+                      </label>
                     </div>
-                    <div className="meal_cost"> {item.cost} </div>
+                    <div className="meal_cost text">${item.cost}</div>
                   </div>
                 ))}
               </div>

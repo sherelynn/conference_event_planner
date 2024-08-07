@@ -35,6 +35,7 @@
   color: #333;
   width: 300px;
 }
+
 .text h1 {
   width: 900px;
   font-size: 40px;
@@ -47,16 +48,20 @@
   align-items: center;
   justify-content: center;
 }
+
 .venue_main .text {
   font-size: 30px;
   color: #333;
 }
+
 .quantity-value {
   margin: 0 10px;
 }
+
 .main_container {
   display: flex;
 }
+
 .items-information {
   display: flex;
   flex-direction: column;
@@ -66,11 +71,13 @@
   align-items: center;
   justify-content: center;
 }
+
 .meal_item {
   display: flex;
   flex-direction: column;
   gap: 10px;
 }
+
 .total_cost {
   display: flex;
   justify-content: center;
@@ -105,6 +112,7 @@
   gap: 10px;
   font-size: 20px;
 }
+
 .input-container input {
   width: 100px;
   height: 30px;
@@ -112,6 +120,7 @@
   border: 1px solid lightgrey;
   padding: 13px;
 }
+
 .meal_selection {
   display: flex;
   flex-wrap: wrap;
@@ -126,9 +135,11 @@
   height: 20px;
   padding: 5px;
 }
+
 .meal_selection label {
   font-size: 25px;
 }
+
 .meal_item .inner {
   display: flex;
   flex-direction: row;
@@ -147,6 +158,7 @@
   font-size: 25px;
   margin-left: 40px;
 }
+
 .venue_main .img img {
   width: 100%;
   height: 200px;
@@ -176,11 +188,13 @@
 .display_box1 {
   padding-left: 20px;
 }
+
 .addons_btn {
   display: flex;
   align-items: center;
   justify-content: center;
 }
+
 .btn-success {
   display: flex;
   align-items: center;
@@ -193,6 +207,7 @@
   border-radius: 5px;
   cursor: pointer;
 }
+
 .btn-warning {
   background-color: #969ebc;
   display: flex;
@@ -215,6 +230,7 @@
 .items_view {
   font-size: 20px;
 }
+
 .table_item_data {
   width: 70vw;
   border-collapse: collapse;
@@ -243,6 +259,7 @@
 .table_item_data tbody tr:first-child:hover {
   background-color: transparent;
 }
+
 navbar {
   display: flex;
   justify-content: space-between;
@@ -258,15 +275,18 @@ navbar {
   color: #efc16b;
   font-weight: 700;
 }
+
 .nav_links {
   display: flex;
   gap: 170px;
 }
+
 .left_navbar {
   width: 60vw;
   display: flex;
   gap: 180px;
 }
+
 .nav_links a {
   text-decoration: none;
   color: white;
@@ -278,12 +298,15 @@ navbar {
 .nav_links a:hover {
   color: #ff9900;
 }
-.button_container {
+
+.button_container,
+.addons-btn {
   /* background-color: red; */
   width: 200px;
   display: flex;
   gap: 20px;
 }
+
 .details_button {
   padding: 8px 16px;
   background-color: #efc16b;
@@ -301,30 +324,125 @@ navbar {
   top: 1px;
   z-index: 99;
 }
+
 .btn-disabled {
   opacity: 0.5; /* Reduce opacity to visually indicate disabled state */
   cursor: not-allowed; /* Change cursor to indicate that the button is not clickable */
 }
-@media (max-width: 700px) {
+
+@media only screen and (max-width: 37rem) {
   navbar {
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    padding: 20px 20px;
     background-color: #031427;
     color: white;
-    width: 100vw;
   }
-  .nav_links {
-    display: flex;
-    flex-direction: column;
-    gap: 20px;
+
+  .company_logo {
+    font-size: 1.5em;
   }
+
   .left_navbar {
     width: 100%;
     display: flex;
+    flex-direction: column;
+    align-items: center;
     justify-content: center;
+    gap: 0.5em;
+  }
+
+  .nav_links {
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+    margin: 2% auto;
+  }
+
+  .nav_links a {
+    font-size: 1em;
+  }
+
+  .details_button {
+    font-size: 1em;
+    padding: 1% 2%;
+  }
+
+  .items-information {
     gap: 0;
+    margin-top: 20vh;
+  }
+
+  .venue_container {
+    width: 90vw;
+    margin: 0;
+  }
+
+  .venue_main {
+    gap: 5px;
+  }
+
+  .text h1 {
+    font-size: 1em;
+    width: 100vw;
+    margin: 0;
+  }
+
+  .venue_selection,
+  .addons_selection,
+  .meal_selection {
+    margin: 0;
+    width: 100%;
+  }
+
+  .venue_main .text,
+  .selected_count,
+  .total_cost,
+  .meal_item .text {
+    font-size: 0.8em;
+  }
+
+  .button_container,
+  .addons-btn {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .total_cost {
+    margin: 0;
+    width: 80vw;
+    font-weight: 900;
+  }
+
+  .input-container h3,
+  .input-container input {
+    font-size: 1em;
+  }
+
+  #numberOfPeople {
+    width: 20%;
+  }
+
+  .meal_selection input[type="checkbox"] {
+    width: 2em;
+    height: 2em;
+    padding: 2em;
+  }
+
+  .meal_item {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .inner .text {
+    padding-left: 10px;
+  }
+
+  .meal_selection {
+    flex-direction: column;
+    align-items: flex-start;
   }
 }
